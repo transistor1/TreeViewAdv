@@ -7,7 +7,7 @@ namespace Aga.Controls.Tree
 {
 	public class ListModel : TreeModelBase
 	{
-		private IList _list;
+		protected IList _list;
 
 		public int Count
 		{
