@@ -59,6 +59,12 @@ namespace Aga.Controls.Tree.NodeControls
 				case Keys.Escape:
 					e.IsInputKey = true;
 					break;
+                case Keys.C:
+                case Keys.X:
+                case Keys.V:
+                    if (e.Modifiers == Keys.Control)
+                        e.IsInputKey = true;
+                    break;
 			}
 		}
 
