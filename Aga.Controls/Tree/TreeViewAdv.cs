@@ -7,6 +7,7 @@ using System.Security.Permissions;
 using System.Threading;
 using System.Windows.Forms;
 using System.Collections;
+using System.Linq;
 
 using Aga.Controls.Tree.NodeControls;
 using Aga.Controls.Threading;
@@ -1259,7 +1260,7 @@ namespace Aga.Controls.Tree
 			if (node == Root || (node.Tag != null && list.ContainsKey(node.Tag))) //Root.Tag always is null, and Root always expanded
 			{
 				node.IsExpanded = true;
-				foreach (var child in node.Children)
+				foreach (var child in node.Children.ToList())
 					RestoreExpandedNodes(child, list);
 			}
 		}
